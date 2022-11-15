@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <style>
+        /* Baixando fontes do google fonts: https://fonts.google.com/?category=Handwriting */
+        @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Work+Sans:ital,wght@0,100;0,200;1,100;1,200&display=swap');
+
+        /* Inslando fontes próprias */
+        @font-face {
+            font-family: 'Love' ;
+            src: url('./high_horse/High\ Horse.otf') format('opentype'), url('High\ Horse.ttf') format('truetype');
+            /* Tipos de format(): - opentype (otf), truetype(ttf), embedded-opentype, truetype-aat (Apple Advanced Typography), svg */
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'Kaushan Script', cursive;
+            /* 
+            Medidas absluta = cm, mm, in, px, pt, pc (pt e pc são medidas para papel. Não se usa! Recomenda-se px. 16px é o tamanho padrão = 1em)
+            Medidas relativas = em, ex, rem, vw, vh, % (A mais usada é em = 16px)
+             */
+
+            /* font-size: 1em;
+            font-weight: normal; */
+                /* lighter, normal, bold, bolder */
+                /* 100 a 900 */
+            /* font-style: italic;
+            text-decoration: underline; */
+        }
+        
+        h1 {
+            /* font-family: 'Times New Roman', Times, serif;
+            font-weight: bolder;
+            font-size: 3em;
+            font-style: italic; */
+            /* Tudo isso pode ser substituido por font: style, weight, size e family */
+            font: italic bolder 3em 'Work Sans', Times, serif;
+        }
+
+        h2 {
+            font: bold 2em 'Times New Roman'
+        }
+
+        /* Formatando tag com identificação id. Lembrando que o id é idividual, portanto não pode ser utilizado o mesmo id em mais de uma tag no mesmo documento HTML (em docs diferentes, pode!). Para isso existem as classes*/
+
+        h2#teste {
+            color: red;
+            text-align: right;
+            font-size: 3em;
+        }
+
+        h3 {
+            font-family: 'Love';
+            font-size: 5em;
+        }
+
+        /* Usando classe para formatar varias tags */
+
+        .basico {
+        font-size: 3em;
+        color: blueviolet;
+        background-color: blue;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .destaque {
+            background-color: yellowgreen;
+        }
+
+        /* Criando Css pseudoclasse hover */
+
+        div {
+            display: inline-block;
+            background-color: lightgray;
+            border:  1px solid black; 
+            text-align: center;
+            height: 200px;
+            width: 200px;
+        }
+
+        div:hover {
+            background-color: yellow;
+        }
+
+        div > p {
+            display: none;
+        }
+
+        div:hover > p {
+            display: block;
+            color: white;
+            background-color: red;
+            width: 100px;
+        }
+
+        /* Pseudo-elemento em CSS */
+
+        a {
+            color: red;
+            text-decoration: none; /*retirar o sublinhado do link*/
+        }
+
+        a:visited {
+            color: darkred;
+        }
+
+        a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+
+        /* Muda a cor quando clicar no conteúdo */
+        a:active {
+            color: yellow;
+        }
+
+        /* exemplo de pseudo-elementos */
+        
+        a::before {
+            content: '⇒ ';
+        }
+        
+        a::after {
+            content: ' [link]';
+            text-decoration: none;
+            font-weight: normal;
+            color: darkgray;
+        }
+
+        /* classe com pseudo-elementos. */
+
+        .especial {
+            background-color: gray;
+        }
+
+        .especial::after {
+            content: ' [especial]';
+            color: yellowgreen;
+        }
+
+        /* 
+        Resumo de seletores personalizados
+            #   =   id
+            .   =   class
+            :   =   pseudo-class
+            ::  =   pseudo-element
+            >   =   clildren 
+        */
+
+
+    </style>
+</head>
+<body>
+    <h1>Fontes</h1>
+    <p>Tipografia precisa representar a emoção do momento. Da idéia que se está querendo passar.</p>
+    <p>Procura-se as fontes por categorias.</p>
+    <h2>Anatomias dos tipos</h2>
+    <ol>
+        <li>Categorias de fontes</li>
+            <ol>
+                <li>serifadas = que possuem serifas</li>
+                <li>sans-serif = não tem serifas</li>
+                <li>monoespaçadas = todas as letras possuem larguras iguais</li>
+                <li>handwriting = simulam as escritas a mão</li>
+                <li>display = não seguem nenhuma ordem igual às anteriores</li>
+            </ol>
+        <li>d </li>
+    </ol>
+    <h1>Trabalhando com fontes</h2>
+    <h2>Título 1</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo cumque voluptatum officia reiciendis fugiat incidunt molestiae expedita explicabo unde pariatur nesciunt, reprehenderit quia saepe officiis blanditiis ipsum veritatis temporibus doloribus?</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo cumque voluptatum officia reiciendis fugiat incidunt molestiae expedita explicabo unde pariatur nesciunt, reprehenderit quia saepe officiis blanditiis ipsum veritatis temporibus doloribus?</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo cumque voluptatum officia reiciendis fugiat incidunt molestiae expedita explicabo unde pariatur nesciunt, reprehenderit quia saepe officiis blanditiis ipsum veritatis temporibus doloribus?</p>
+    <!-- Usado tags com identificação. Também pode ser usar um id e uma ou várias classes em uma mesma tag. O id, no entanto, sobrepõe-->
+    <h2 id="teste" class="destaque">Título 2</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo cumque voluptatum officia reiciendis fugiat incidunt molestiae expedita explicabo unde pariatur nesciunt, reprehenderit quia saepe officiis blanditiis ipsum veritatis temporibus doloribus?</p>
+    <h3>Título 2.1</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At voluptates quasi facere laboriosam provident fuga cumque commodi eaque nobis, laborum dolorem eligendi nulla placeat, unde nesciunt numquam corporis harum aliquid!</p>
+    <!-- Usando class -->
+    <h4 class="basico">Título 2.1.1</h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At voluptates quasi facere laboriosam provident fuga cumque commodi eaque nobis, laborum dolorem eligendi nulla placeat, unde nesciunt numquam corporis harum aliquid!</p>
+    <h4 class="basico">Título 2.1.2</h4>
+    <!-- Pode-se colocar duas classes da forma a seguir. -->
+    <p class="basico destaque" >Lorem ipsum dolor sit amet consectetur adipisicing elit. At voluptates quasi facere laboriosam provident fuga cumque commodi eaque nobis, laborum dolorem eligendi nulla placeat, unde nesciunt numquam corporis harum aliquid!</p><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At voluptates quasi facere laboriosam provident fuga cumque commodi eaque nobis, laborum dolorem eligendi nulla placeat, unde nesciunt numquam corporis harum aliquid!</p>
+    <h5 class="basico">Título 2.1.2.1</h5>
+    <p class="destaque">Lorem ipsum dolor sit amet consectetur adipisicing elit. At voluptates quasi facere laboriosam provident fuga cumque commodi eaque nobis, laborum dolorem eligendi nulla placeat, unde nesciunt numquam corporis harum aliquid!</p>
+
+    <!-- Usando Pseudo-classes em CSS -->
+
+    <div id="d1">01</div>
+    <div id="d2">02</div>
+    <div id="d3">03</div>
+
+    <!-- Exemplo 2 de pseudo-classes hover -->
+
+    <h1>Exemplo de hover</h1>
+    <p>Passe o mouse sobre o texto abaixo</p>
+    <div>
+        Passe o mouse aliqui!
+        <p>TEXTO ESCONDIDO</p>
+    </div>
+
+    <!-- Pseudo-elemento em CSS -->
+
+    <h1>Personalizando links com pseudo-elementos</h1>
+    <ul>
+        <li><a href="https://gustavoguanabara.github.io">Repositório GitHub</a></li>
+        <li><a href="https://youtube.com/cursoemvideo" class="especial">Canal do YouTube</a></li>
+        <li><a href="https://www.cursoemvideo.com">Site do CursoemVideo</a></li>
+    </ul>
+
+
+
+
+</body>
+</html>

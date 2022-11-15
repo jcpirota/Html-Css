@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento HTML - Inserindo tags</title>
+    <!-- Inserindo favicon. Explicação a seguir. Tipo de link favicon -->
+    <link rel="shortcut icon" href="carrinho_favicom/favicon.ico" type="image/x-icon">
+    <style>
+        mark {
+            background-color: limegreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>Favicon</h1>
+    <p>Favicon é o icone que irá pana tab do browser</p>
+    <p>Para converter imagem em arquivos de icone favicon acesse o site <a href="https://favicon.io/#google_vignette">favicon.io</a></p>
+    <p>A inclusão do favicon é feita criando um link para o arquivo na head da página</p>
+
+    <h1>Títulos</h1>
+    <p>
+        <h1>Título 1</h1>
+        <h2>Título 2</h2>
+        <h3>Título 3</h3>
+        <h4>Título 4</h4>
+        <h5>título 5</h5>
+    </p>
+
+    <h1>Parágrafos</h1>
+    <p>Parágrafo</p>
+    
+    <h1>Quebra de parágrafo</h1>
+    <p>Quebra de <br> parágrafo </p>
+
+    <h1>Traço</h1>
+    <hr>
+
+    <h1>Negrito</h1>
+    <p>Escrevendo em <strong>negrito</strong></p>
+    <p>Escrevendo em <b>negrito</b></p>
+    <p>Escrevendo em <em>ênfase</em></p>
+
+    <h1>Itálico</h1>
+    <p>Escrevendo em <i>itálico</i></p>
+
+    <h1>Sobrescrito</h1>
+    <p>Escrevendo em subrescrito: 2<sup>20</sup>+2<p>
+    
+    <h1>Subescrito</h1>
+    <p>Escrevendo em subrescrito: H<sub>2</sub>O<p>
+    
+    <h1>Marcadores de texto</h1>
+    <p>Este texto foi <mark>marcado</mark></p>
+    <p>Este texto foi <mark style="background-color: green;">marcado</mark></p>
+
+    <h1>Deletado</h1>
+    <p>Esta parte do texto foi <del>deletada no final</del></p>
+
+    <h1>Inserido</h1>
+    <!-- Com o ins há uma sentido, semântica, a ser interpretada em processo de indexação -->
+    <p>Esta parte do texto foi <ins>inserida</ins></p>
+    <!-- o <u> faz a mesma coisa, aparentemente, que o ins. Porém, é só formatação. Não tem sentido algum para indexação. -->
+    <p>Esta parte do texto foi <u>sublinhada</u></p>
+
+    <h1>Grandes</h1>
+    <p>Esta parte do texto foi <big>letras grandes</big></p>
+
+    <h1>Pequenas</h1>
+    <p>Esta parte do texto foi <small>letras pequenas</small></p>
+
+    <h1>Citações</h1>
+    <blockquote cite="http://www.worldwildlife.org/who/index.html">
+        For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally.
+    </blockquote>
+
+    <img src="exercicios/ex005 - tags/ogrito-cke.webp" width="220" height="277" alt="The Scream">
+    <p><cite>The Scream</cite> by Edward Munch. Painted in 1893.</p>
+
+    <h1>Listas sem ordenação</h1>
+    <ul type="circle">
+        <li>teste 1</li>
+        <li>teste 2</li>
+        <li>teste 3</li>
+        <ul type="square">
+            <li>teste 1</li>
+            <li>teste 2</li>
+            <li>teste 3</li>
+            <ul type="disc">
+                <li>teste 1</li>
+                <li>teste 2</li>
+                <li>teste 3</li>
+            </ul>
+        </ul>
+    </ul>
+
+    <h1>Lista com ordenação</h1>
+    <ol start="1" type="1">
+        <li>teste 1</li>
+        <li>teste 2</li>
+        <li>teste 3</li>
+        <ol start="3" type="a">
+            <li>teste 1</li>
+            <li>teste 2</li>
+            <li>teste 3</li>
+            <ol start="100" type="1" reversed>
+                <li>teste 1</li>
+                <li>teste 2</li>
+                <li>teste 3</li>
+                <li>teste 1</li>
+                <li>teste 2</li>
+                <li>teste 3</li>
+            </ol>
+        </ol>
+    </ol>
+
+    <h1>Descrição de lista</h1>
+    <dl>
+        <dt>Casal</dt>
+        <dd>José</dd>
+        <dd>Renata</dd>
+        <dt>Filhos</dt>
+        <dd>Maria Eduarda</dd>
+        <dd>Maria Clara</dd>
+    </dl>
+    
+    <h1>Links externos</h1>
+    <a href="https://www.w3schools.com/TAGS/tag_a.asp">hiperlink da w3</a>
+
+    <h1>Links internos</h1>
+    <p>Inserindo link para outras pagina do meu projeto <a href="../ex004-imagens/ex004.html" rel="prev">pagina de imagens</a></p>    
+    <!-- rel="prev" funciona sem colocar, mas serve para dizer a indexação do google, qual você considera sua página anterior. (semântica importante para indexação do google)-->
+
+    <p>Esta pagina é um oferencimento de <a href="https://www.hostnet.com.br/" rel="nofollow">Hostnet</a></p>
+
+    <!--rel="nofollow" = Não siga = serve para não perpetuar a indexação do google. Somente uma menção realizada, mas que você não garante. Usado em patrocínios de páginas. Você não dá aval para a outra página -->
+
+    <h1>Downloading de arquivos</h1>
+    <p>Baixando o arquivo <a href="./pshopy_tag.pdf" download="pshopy_tag.pdf" type="'application/pdf" >aqui</a></p>
+    <!-- Os types pode variar para cada tipo de arquivo. Pesquisar em https://www.iana.org/assignments/media-types/media-types.xhtml -->
+
+    <h1>Imagens dinâmicas</h1>
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/imagem_p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/imagem_m.png" type="image/png">
+        <img src="imagens/imagem_g.png" alt="imagem flexivel">
+        <!-- Precisa ser colocado na ordem do menor para o maior arquivo para funcionar-->
+    </picture>
+
+    <h1>Carregando audio</h1>
+    <!-- 
+        Você pode usar audio do youtube (Atribuição não necessária).
+        Para acessar, clique no menu principal da sua conta e acesse YouTube Studio. No menu lateral esquerdo acesse bliblioteca de audio (filtre por atribuições não necessária para pegar músicas gratuítas);
+        MP3 WAV OGG tipo de arquivo com 
+    -->
+    <p>Inserir uma opção</p>
+    <audio src="./audio/Calimba - E's Jammy Jams.mp3" controls autoplay></audio>
+
+    <!-- Para garantir que o browse toque, é possível colocar para tentar tocar vários tipos de audito caso não tenha sucess, seguindo a sequencia digitada -->
+
+    <p>Inserir várias opções de tocadores de audio</p>
+    <audio preload="metadata" controls autoplay>
+        <source src="./audio/Calimba - E's Jammy Jams.mp3" type="audio/mpeg">
+        <source src="./audio/Calimba - E's Jammy Jams.ogg" type="audio/ogg">
+        <source src="./audio/Calimba - E's Jammy Jams.wav" type="audio/wav">
+        <p>Infelizmente seu navegador não consegue reproduzir áudio. <a href="./audio/Calimba - E's Jammy Jams.mp3">Clique aqui para baixar o arquivo mp3</a></p>
+    </audio>
+
+    <h1>Carregando vídeos</h1>
+    <!-- 
+        Cuiado com direitos autorais;
+            Uma alternativa para baixar vídeos gratuíto é o pexels
+                https://www.pexels.com/pt-br/videos/
+        Cuidado com arquivos grandes/pesados
+        Formatos mais utilizados
+            mp4, m4v, webn, ogv
+        Tamanho
+            Ideal é de no máximo 1080p
+            Evitar hospedagem local. Aumenta muito o custo de hospedagem do site
+     -->
+    <h2>Videos hospedados localmente (Evitar! Aumenta o custo de hospedagem)</h2>
+
+    <h3>Vídeo com um único tipo de arquivo. Pode nao rodar em alguns browsers</h3>
+
+    <video src="./media/video.mp4" controls autoplay loop></video>
+
+    <h3>Vídeo com vários tipos de arquivos para rodar em vários tipos de browsers</h3>
+    <video preload="metadata" controls poster="/exercicios/ex005-tags/imagens/imagem_p.png">
+        <source src="./media/video.ogm" type="video/ogm">
+        <source src="./media/video.mp4" type="video/mp4">
+        <p>Seu navegador não tem compatibilidade com a execução de vídeo </p>
+    </video>
+
+    <h2>Vídeos hospedados externamente (ideal = menor custo de hospedagem</h2>
+    <!-- 
+        Usando o youtube
+     -->
+    <h3>Inserindo vídeo do youtube (não é possível limitar acesso para assinantes)</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/LW0bhKitRBk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <h3>Inserindo vídeo usando o vimeo (é possível limitar acesso para assinantes) [Pago!]</h3>
+    <iframe src="https://player.vimeo.com/video/764699383?h=74aa786b62" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+
+</body>
+<footer>
+    <h1>Rodapé</h1>
+    <p>&reg;Rodapé da página</p>
+</footer>
+</html>
+
+<!-- 
+    Anexos
+        https://www.w3schools.com/TAGS/default.asp
+
+-->
